@@ -1,21 +1,40 @@
 **Stack**
 
-- Snowpack (alternative to Webpack, Parcel and Rollup)
-- V language (alternative to Go and Rust)
-- Svelte (alternative to React, Vue, Angular, EmberJS)
-- Garden.io & Terraform ([Kubernetes dev workflow](https://medium.com/garden-io/garden-terraform-your-end-to-end-kubernetes-workflow-4e9f8ea75091))
-- GKE (IaaS)
-- Kafka (data lake)
-- FaunaDB (SQL,CQL, graph db, GraphQL)
-- Rockset (Real-time SQL on NoSQL)
+Frontend
+- Svelte 
+- [Storybook](https://www.learnstorybook.com/)
+- Svite, Snowpack
+- [Zero](https://github.com/remoteinterview/zero)
+- https://github.com/tjinauyeung/svelte-forms-lib
 
-**Tools**
+Backend
+- [Oak](https://github.com/oakserver/oak)
+- [Validator](https://github.com/icebob/fastest-validator)
+- Go
 
-- https://thedigitalprojectmanager.com/best-communication-tools/
+Links
 
-**Git**
+- https://stackoverflow.com/questions/54652683/how-to-access-secrets-in-node-js-with-hashicorp-vault
+- https://medium.com/better-programming/the-battle-of-bundlers-6333a4e3eda9
+- https://husio.github.io/blog/accessing-data-in-go/
+- https://husobee.github.io/school/secure-programming/2017/08/28/secure-programming-1.html
 
-- https://www.endoflineblog.com/oneflow-a-git-branching-model-and-workflow
-- https://medium.com/@dehora/feature-flags-smaller-better-faster-software-development-f2eab58df0f9
-- https://www.infoq.com/presentations/death-continuous-integration/
-- https://medium.com/@patrickporto/4-branching-workflows-for-git-30d0aaee7bf
+**Separation of Concerns**
+
+App logic should be [middleware](https://github.com/oakserver/oak) only, no more no less<br>
+TL;DR Leave app logic alone
+
+- Separate configuration from app logic
+- [Separate deployment logic from app logic](https://github.com/crossplane/crossplane)
+- [Separate authentication/authorization from app logic](https://github.com/dapr/samples/tree/master/7.middleware)
+- [Separate security logic from app logic](https://github.com/dapr/samples/tree/master/9.secretstore)
+- [Separate async logic from transactions](https://github.com/dapr/samples/tree/master/4.pub-sub)
+- [Separate UI logic from app logic](https://svelte.dev/)
+- [Separate database logic from app logic](https://husio.github.io/blog/accessing-data-in-go/)
+- [Separate ops logic from app logic](https://github.com/dapr/samples/tree/master/8.observability)
+- [Separate endpoint logic from app logic](https://zeroserver.io)
+- [Separate internal RPC from app logic](https://github.com/dapr/docs/blob/master/concepts/service-invocation/README.md)
+- [Separate external RPC from app logic](https://github.com/dapr/docs/blob/master/concepts/bindings/README.md)
+- Separate end user error logic from app logic 
+- Separate system error logic from app logic
+- [Separate state management logic from app logic](https://github.com/dapr/docs/blob/master/concepts/state-management/README.md)
